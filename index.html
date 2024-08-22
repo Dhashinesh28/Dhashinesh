@@ -1,38 +1,122 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Design Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-        <input type="text" id="nam" value="" ><br>
-        <label>Enter your mail</label>
-        <input type="text" id="u1" name="txtMail"><br>
-        <label>Enter Password</label> 
-        <input type="password" id="u2" name="txtpass"><br>
-        <input type="button" name="btnGreet" value="sumit" onclick="sumit()">
-        <script>
-            console.log("hello world");
-            
-            function sumit()
-            {
-                var name=document.getElementById("nam").value;
-                var mail=document.getElementById("u1").value;
-                var pas=document.getElementById("u2").value;
-                if(mail=""){
-                    alert("enter the mail");
-                }
-                else if(pas=""){
-                    alert("enter the password");
-                }
-                else{
-                    alert("WELCOME "+name);
-                }
-                
-            }
-            for(var i=0;i<5;i++){
-                console.log(i);
-            }
-        </script>
-    </body>
-</html> 
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2em auto;
+            background-color: #fff;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 0.75em 1.5em;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 0.75em;
+            margin: 0.5em 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interactive Design Example</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
